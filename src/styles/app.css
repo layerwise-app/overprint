@@ -35,6 +35,8 @@
 :root {
   --gutter: clamp(14px, 2.4vw, 36px);
   --head-h: 52px;
+  /* The table under the sheets, one shade below the paper, so each sheet has an edge. */
+  --table: color-mix(in srgb, var(--paper) 86%, #6f6448);
   color-scheme: light;
 }
 
@@ -338,8 +340,7 @@ html[data-home-view='canvas'] .home-list {
   position: fixed;
   inset: var(--head-h) 0 0 0;
   overflow: clip;
-  /* The table under the sheets, one shade below the paper, so each sheet has an edge. */
-  background: color-mix(in srgb, var(--paper) 86%, #6f6448);
+  background: var(--table);
   cursor: grab;
   touch-action: none;
   user-select: none;
@@ -578,6 +579,9 @@ html[data-home-view='canvas'] .home-list {
 }
 
 /* ---------- Home: phone collage. Normal scrolling, no gestures. ---------- */
+.home-collage {
+  background: var(--table);
+}
 .collage-head {
   padding-bottom: 28px;
 }
