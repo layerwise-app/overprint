@@ -1,0 +1,155 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "id": "3d0ef22c-f4e7-48ef-8d1c-c5b53b2d949c",
+  "prevIds": [
+    "a3b8c8d2-2b15-474e-8ec6-cf1d4711ec3c"
+  ],
+  "ddl": [
+    {
+      "name": "contact_messages",
+      "entityType": "tables"
+    },
+    {
+      "name": "contact_rate_limits",
+      "entityType": "tables"
+    },
+    {
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "id",
+      "entityType": "columns",
+      "table": "contact_messages"
+    },
+    {
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "name",
+      "entityType": "columns",
+      "table": "contact_messages"
+    },
+    {
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "email",
+      "entityType": "columns",
+      "table": "contact_messages"
+    },
+    {
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "message",
+      "entityType": "columns",
+      "table": "contact_messages"
+    },
+    {
+      "type": "text",
+      "notNull": true,
+      "autoincrement": false,
+      "default": "'skipped'",
+      "generated": null,
+      "name": "email_status",
+      "entityType": "columns",
+      "table": "contact_messages"
+    },
+    {
+      "type": "integer",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "created_at",
+      "entityType": "columns",
+      "table": "contact_messages"
+    },
+    {
+      "type": "text",
+      "notNull": false,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "key",
+      "entityType": "columns",
+      "table": "contact_rate_limits"
+    },
+    {
+      "type": "integer",
+      "notNull": true,
+      "autoincrement": false,
+      "default": null,
+      "generated": null,
+      "name": "window_start",
+      "entityType": "columns",
+      "table": "contact_rate_limits"
+    },
+    {
+      "type": "integer",
+      "notNull": true,
+      "autoincrement": false,
+      "default": "0",
+      "generated": null,
+      "name": "count",
+      "entityType": "columns",
+      "table": "contact_rate_limits"
+    },
+    {
+      "columns": [
+        "id"
+      ],
+      "nameExplicit": false,
+      "name": "contact_messages_pk",
+      "table": "contact_messages",
+      "entityType": "pks"
+    },
+    {
+      "columns": [
+        "key"
+      ],
+      "nameExplicit": false,
+      "name": "contact_rate_limits_pk",
+      "table": "contact_rate_limits",
+      "entityType": "pks"
+    },
+    {
+      "columns": [
+        {
+          "value": "created_at",
+          "isExpression": false
+        }
+      ],
+      "isUnique": false,
+      "where": null,
+      "origin": "manual",
+      "name": "contact_messages_created_at_idx",
+      "entityType": "indexes",
+      "table": "contact_messages"
+    },
+    {
+      "columns": [
+        {
+          "value": "window_start",
+          "isExpression": false
+        }
+      ],
+      "isUnique": false,
+      "where": null,
+      "origin": "manual",
+      "name": "contact_rate_limits_window_idx",
+      "entityType": "indexes",
+      "table": "contact_rate_limits"
+    }
+  ],
+  "renames": []
+}
