@@ -6,6 +6,7 @@ import { nearestInDirection, type Point } from '~/lib/spatial';
 import { portfolio } from '~/portfolio.config';
 import { Display } from './Display';
 import { Picture } from './Picture';
+import { PoweredBy } from './PoweredBy';
 
 const WORLD = { width: 3400, height: 2600 };
 const START = { x: 170, y: 112 };
@@ -330,9 +331,10 @@ export function WorkCanvas({ projects }: { projects: ProjectWithSlug[] }) {
       <div className='canvas-headline' aria-hidden='true'>
         <Display lines={[portfolio.name.toUpperCase()]} baseWidth={128} decorative />
       </div>
-      <p className='canvas-hint'>
-        Drag or scroll to move. Arrow keys jump between pieces, Enter opens one.
-      </p>
+      <div className='canvas-hint'>
+        <p>Drag or scroll to move. Arrow keys jump between pieces, Enter opens one.</p>
+        <PoweredBy />
+      </div>
     </section>
   );
 }

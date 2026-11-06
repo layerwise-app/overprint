@@ -259,6 +259,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
   gap: 6px 28px;
   padding: 16px var(--gutter) 22px;
   border-top: 2px solid var(--text);
@@ -271,6 +272,16 @@
 .site-foot ul {
   display: flex;
   gap: 16px;
+}
+.powered-by {
+  display: block;
+  flex: none;
+  line-height: 0;
+}
+.powered-by img {
+  display: block;
+  width: 174px;
+  height: 28px;
 }
 
 /* ---------- Home: three views, chosen before first paint ---------- */
@@ -521,7 +532,12 @@ html[data-home-view='canvas'] .home-list {
   right: 0;
   bottom: 0;
   z-index: 4;
-  padding: 7px var(--gutter);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  /* Tighter than the text alone needs, so the 28px badge keeps the bar clear of the headline. */
+  padding: 2px var(--gutter);
   background: var(--paper);
   border-top: 2px solid var(--text);
   font-family: var(--font-label);
@@ -529,6 +545,9 @@ html[data-home-view='canvas'] .home-list {
   font-weight: 500;
   font-stretch: 88%;
   pointer-events: none;
+}
+.canvas-hint .powered-by {
+  pointer-events: auto;
 }
 
 /* ---------- Home: plain index ---------- */
@@ -1205,6 +1224,7 @@ html[data-home-view='canvas'] .home-list {
   }
   .site-foot {
     flex-direction: column;
+    align-items: flex-start;
   }
 }
 

@@ -1,11 +1,28 @@
+<a href="https://layerwise.app"><picture><source media="(prefers-color-scheme: dark)" srcset="https://layerwise.app/powered-by-dark.png"><img src="https://layerwise.app/powered-by.png" alt="Powered by Layerwise" width="174" height="28"></picture></a>
+
 # Overprint
 
-A portfolio template that behaves like a risograph. Newsprint, three inks that
-overprint with multiply, plates slightly out of register, and huge type that
-changes width under the pointer. Sample owner: Juno Reyes, a fictional designer
-in Mexico City.
+Overprint is a portfolio template for graphic designers, illustrators, and small
+studios who want their work to look printed. It behaves like a risograph:
+newsprint, three inks that overprint with multiply, plates slightly out of
+register, and huge type that changes width under the pointer. The sample owner is
+Juno Reyes, a fictional designer in Mexico City.
 
-Everything you change lives in three places:
+Visitors pan a large sheet of work pinned at scattered angles by dragging,
+scrolling, or using the arrow keys, or switch to a plain list. On phones the sheet
+becomes a scrolling collage. Each project opens as a case study printed in its own
+two inks. Visitors can also filter the work by discipline, read about the owner's
+services, clients, and experience, download a CV, and send a message through the
+contact form.
+
+Try the live demo at [overprint.layerwise.site](https://overprint.layerwise.site/).
+
+Overprint was built with [Layerwise](https://layerwise.app), and you can open it
+in Layerwise to make your own version.
+
+## Make it yours
+
+Most of what you change lives in three places:
 
 | What                                                         | Where                       |
 | ------------------------------------------------------------ | --------------------------- |
@@ -16,6 +33,11 @@ Everything you change lives in three places:
 Contact form messages are saved to the `contact_messages` table, which you can
 read on the Layerwise Database page. To have them emailed too, set `ownerEmail`
 in `src/portfolio.config.ts`.
+
+Search and link-preview settings, such as the address to index once a custom
+domain is connected, the share image, and a Google Search Console tag, are in
+`src/lib/site.ts`. The Powered by Layerwise badge in the footer and in the home
+canvas's bottom bar is `src/components/PoweredBy.tsx`.
 
 ## Add a project
 

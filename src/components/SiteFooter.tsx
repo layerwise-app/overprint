@@ -1,4 +1,5 @@
 import { portfolio } from '~/portfolio.config';
+import { PoweredBy } from './PoweredBy';
 
 export function SiteFooter() {
   const { display, text, label } = portfolio.fonts;
@@ -20,6 +21,7 @@ export function SiteFooter() {
         Three inks on newsprint. Set in {display.family}, {text.family}, and{' '}
         {label.family}.
       </p>
+      <PoweredBy />
     </footer>
   );
 }
